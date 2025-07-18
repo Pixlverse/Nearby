@@ -729,94 +729,64 @@
     </div>
 
     <header>
-      <div class="container-fluid">
-        <div class="row py-3 border-bottom">
+      <div class="container-fluid border-bottom py-3">
+        <nav class="navbar navbar-expand-lg bg-white w-100">
           <div
-            class="col-sm-4 col-lg-2 text-center text-sm-start d-flex gap-3 justify-content-center justify-content-md-start"
+            class="container-fluid d-flex justify-content-between align-items-center px-3"
           >
-            <div class="d-flex align-items-center my-3 my-sm-0">
-              <a href="/index.html">
-                <img
-                  src="images/nearbylogo.jpeg"
-                  alt="logo"
-                  class="img-fluid"
-                />
-              </a>
+            <!-- Logo -->
+            <a
+              class="navbar-brand d-flex align-items-center"
+              href="/index.html"
+            >
+              <img
+                src="images/nearbylogo.jpeg"
+                alt="logo"
+                class="img-fluid"
+                style="max-height: 50px"
+              />
+            </a>
+
+            <!-- Toggler -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul
+                class="navbar-nav gap-2 gap-lg-4 fw-bold text-uppercase text-dark"
+              >
+                <li class="nav-item">
+                  <a href="/about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/categories.html" class="nav-link">Categories</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/stores.html" class="nav-link">Stores</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/careers.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/contact.html" class="nav-link">Contact</a>
+                </li>
+              </ul>
             </div>
           </div>
-
-          <div class="col-lg-10 d-flex align-items-center">
-            <ul
-              class="navbar-nav list-unstyled d-flex flex-row gap-3 gap-lg-5 justify-content-end flex-wrap align-items-center mb-0 fw-bold text-uppercase text-dark w-100"
-            >
-              <li class="nav-item active">
-                <a href="/about.html" class="nav-link">About Us</a>
-              </li>
-              <li class="nav-item active">
-                <a href="/categories.html" class="nav-link">Categories</a>
-              </li>
-              <li class="nav-item active">
-                <a href="/stores.html" class="nav-link">Stores</a>
-              </li>
-              <!-- <li class="nav-item active">
-                <a href="/gallery/" class="nav-link">Gallery</a>
-              </li> -->
-              <li class="nav-item active">
-                <a href="/careers.html" class="nav-link">Careers</a>
-              </li>
-              <li class="nav-item active">
-                <a href="/contact.html" class="nav-link">Contact</a>
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle pe-3"
-                  role="button"
-                  id="pages"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Pages</a
-                >
-                <ul
-                  class="dropdown-menu border-0 p-3 rounded-0 shadow"
-                  aria-labelledby="pages"
-                >
-                  <li>
-                    <a href="index.html" class="dropdown-item">About Us </a>
-                  </li>
-                  <li><a href="index.html" class="dropdown-item">Shop </a></li>
-                  <li>
-                    <a href="index.html" class="dropdown-item"
-                      >Single Product
-                    </a>
-                  </li>
-                  <li><a href="index.html" class="dropdown-item">Cart </a></li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Checkout </a>
-                  </li>
-                  <li><a href="index.html" class="dropdown-item">Blog </a></li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Single Post </a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Styles </a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Contact </a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">Thank You </a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">My Account </a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="dropdown-item">404 Error </a>
-                  </li>
-                </ul>
-              </li> -->
-            </ul>
-          </div>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -940,6 +910,68 @@
       </div>
     </section>
 
+    <style>
+      .category-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        padding: 3rem 0;
+      }
+
+      .category-item {
+        width: 18%;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .category-item img,
+      .category-item .img-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .category-item img {
+        object-fit: cover;
+        height: 100%;
+      }
+
+      .category-item h4 {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+
+      @media (max-width: 500px) {
+        .category-item {
+          width: 45%;
+        }
+
+        .category-item h4 {
+          font-size: 1rem;
+        }
+      }
+      .category-item .img-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #f8f8f8; /* Optional: neutral background in case image doesn't fill */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .category-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
     <section class="py-5 overflow-hidden">
       <div class="container-lg">
         <div class="row">
@@ -951,404 +983,89 @@
               >
                 Category
               </h2>
-
-              <div class="position-absolute end-0 top-50 translate-middle-y">
-                <a href="/categories.html" class="btn btn-primary">View All</a>
-              </div>
             </div>
           </div>
         </div>
-        <section style="padding: 3rem 0">
-          <div style="width: 100%; margin: 0 auto">
-            <div
-              style="
-                display: flex;
-                flex-wrap: wrap;
-                gap: 2rem;
-                justify-content: center;
-              "
-            >
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <img
-                  src="images/veg.jpg"
-                  class="rounded-circle"
-                  alt="Category Thumbnail"
-                  style="width: 100%; border-radius: 50%"
-                />
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Fruits & Vegetables
-                </h4>
-              </a>
 
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <img
-                  src="images/grocery.jpg"
-                  class="rounded-circle"
-                  alt="Category Thumbnail"
-                  style="width: 100%; border-radius: 50%"
-                />
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Groceries
-                </h4>
-              </a>
-
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <div
-                  style="
-                    width: 100%;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                  "
-                >
-                  <img
-                    src="images/diary.jpg"
-                    alt="Category Thumbnail"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                  />
-                </div>
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Diary
-                </h4>
-              </a>
-
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <img
-                  src="images/delicious-ice-cream-with-strawberry.jpg"
-                  class="rounded-circle"
-                  alt="Category Thumbnail"
-                  style="width: 100%; border-radius: 50%"
-                />
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Frozen Foods
-                </h4>
-              </a>
-
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <img
-                  src="images/bakery.jpg"
-                  class="rounded-circle"
-                  alt="Category Thumbnail"
-                  style="width: 100%; border-radius: 50%"
-                />
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Bakery
-                </h4>
-              </a>
-
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <div
-                  style="
-                    width: 100%;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                  "
-                >
-                  <img
-                    src="images/National Seafood Month!.jpeg"
-                    alt="Category Thumbnail"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                  />
-                </div>
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Meat & Seafood
-                </h4>
-              </a>
-
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <img
-                  src="images/household.jpg"
-                  class="rounded-circle"
-                  alt="Category Thumbnail"
-                  style="width: 100%; border-radius: 50%"
-                />
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Household Products
-                </h4>
-              </a>
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <div
-                  style="
-                    width: 100%;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                  "
-                >
-                  <img
-                    src="images/top-view-back-school-supplies-with-pencils-backpack.jpg "
-                    alt="Category Thumbnail"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                  />
-                </div>
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Office and School Stationery
-                </h4>
-              </a>
-              <a
-                style="
-                  width: 18%;
-                  text-align: center;
-                  text-decoration: none;
-                  color: inherit;
-                "
-              >
-                <div
-                  style="
-                    width: 100%;
-                    aspect-ratio: 1 / 1;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin-bottom: 10px;
-                  "
-                >
-                  <img
-                    src="images/still-life-care-products.jpg"
-                    alt="Category Thumbnail"
-                    style="width: 100%; height: 100%; object-fit: cover"
-                  />
-                </div>
-                <h4
-                  style="font-size: 0.9rem; margin-top: 1rem; font-weight: 400"
-                >
-                  Personal Care
-                </h4>
-              </a>
+        <div class="category-grid">
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img src="images/veg.jpg" alt="Fruits & Vegetables" />
             </div>
-          </div>
-        </section>
-        <!-- <div class="row">
-          <div class="col-md-12">
-            <div class="category-carousel swiper">
-              <div class="swiper-wrapper">
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-1.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Fruits & Veges
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-2.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Breads & Sweets
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-3.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Fruits & Veges
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-4.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Beverages</h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-5.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Meat Products
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-6.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Breads</h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-7.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Fruits & Veges
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-8.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Breads & Sweets
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-1.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Fruits & Veges
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-1.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Beverages</h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-1.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">
-                    Meat Products
-                  </h4>
-                </a>
-                <a
-                  
-                  class="nav-link swiper-slide text-center"
-                >
-                  <img
-                    src="images/category-thumb-1.jpg"
-                    class="rounded-circle"
-                    alt="Category Thumbnail"
-                  />
-                  <h4 class="fs-6 mt-3 fw-normal category-title">Breads</h4>
-                </a>
+
+            <h4>Fruits & Vegetables</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img src="images/grocery.jpg" alt="Groceries" />
+            </div>
+            <h4>Groceries</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <div class="img-wrapper">
+                <img src="images/diary.jpg" alt="Diary" />
               </div>
             </div>
-          </div>
-        </div> -->
+            <h4>Diary</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img
+                src="images/delicious-ice-cream-with-strawberry.jpg"
+                alt="Frozen Foods"
+              />
+            </div>
+            <h4>Frozen Foods</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img src="images/bakery.jpg" alt="Bakery" />
+            </div>
+            <h4>Bakery</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img
+                src="images/National Seafood Month!.jpeg"
+                alt="Meat & Seafood"
+              />
+            </div>
+            <h4>Meat & Seafood</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img src="images/household.jpg" alt="Household Products" />
+            </div>
+            <h4>Household Products</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img
+                src="images/top-view-back-school-supplies-with-pencils-backpack.jpg"
+                alt="Office & School Stationery"
+              />
+            </div>
+            <h4>Office and School Stationery</h4>
+          </a>
+
+          <a class="category-item">
+            <div class="img-wrapper">
+              <img
+                src="images/still-life-care-products.jpg"
+                alt="Personal Care"
+              />
+            </div>
+            <h4>Personal Care</h4>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1421,7 +1138,7 @@
         </h2>
         <div class="row text-center justify-content-center g-4">
           <!-- Item 1 -->
-          <div class="col-6 col-md-6">
+          <div class="col-12 col-sm-6 col-md-6">
             <div>
               <div
                 style="
@@ -1452,7 +1169,7 @@
           </div>
 
           <!-- Item 2 -->
-          <div class="col-6 col-md-6">
+          <div class="col-12 col-sm-6 col-md-6">
             <div>
               <div
                 style="
@@ -1482,7 +1199,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-6">
+          <div class="col-12 col-sm-6 col-md-6">
             <div>
               <div
                 style="
@@ -1511,7 +1228,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-6">
+          <div class="col-12 col-sm-6 col-md-6">
             <div>
               <div
                 style="
@@ -1598,6 +1315,21 @@
       </div>
     </section> -->
 
+    <style>
+      @media (max-width: 900px) {
+        .cta-wrapper {
+          flex-direction: column;
+          text-align: center;
+          gap: 1.5rem;
+        }
+
+        .cta-button-container {
+          text-align: center !important;
+          width: 100%;
+        }
+      }
+    </style>
+
     <section
       style="
         background: linear-gradient(90deg, #e60023, #c70000);
@@ -1606,6 +1338,7 @@
       "
     >
       <div
+        class="cta-wrapper"
         style="
           max-width: 1200px;
           margin: 0 auto;
@@ -1626,11 +1359,14 @@
             "
           >
             Every purchase adds up — earn rewards and discounts with your
-            Nearbymart Loyalty Card. <br />
+            Nearbymart Loyalty Card.
           </h2>
         </div>
 
-        <div style="flex: 1 1 30%; text-align: right">
+        <div
+          class="cta-button-container"
+          style="flex: 1 1 30%; text-align: right"
+        >
           <a
             href="#"
             style="
